@@ -56,10 +56,6 @@ app.post("/popup-settings", async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => res.type("html").send(html));
-
-app.listen(port, () => console.log(`listening on port ${port}!`));
-
 const html = `
 <!DOCTYPE html>
 <html>
@@ -70,3 +66,7 @@ const html = `
   </body>
 </html>
 `;
+app.get("/", (req, res) => res.type("html").send(html));
+
+app.listen(port, () => console.log(`listening on port ${port}!`));
+
