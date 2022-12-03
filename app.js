@@ -25,7 +25,7 @@ app.get("/cdn", async (req, res, next) => {
       filestream.pipe(res);
     } catch (error) {
     console.log({error});
-    res.status(400).json({ message: "There was an error getting settings" });
+    res.status(400).json({ message: "There was an error getting plugin" });
   }
 });
 
