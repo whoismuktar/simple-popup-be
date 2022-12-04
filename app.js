@@ -34,7 +34,7 @@ app.get("/popup-settings", async (req, res, next) => {
     await storage.init();
     const popUpSettings = (await storage.getItem("popUpSettings")) || {};
 
-    res.status(200).json({ settings: JSON.parse(popUpSettings) });
+    res.status(200).json({ settings: popUpSettings });
   } catch (error) {
     res.status(400).json({ message: "There was an error getting settings" });
   }
